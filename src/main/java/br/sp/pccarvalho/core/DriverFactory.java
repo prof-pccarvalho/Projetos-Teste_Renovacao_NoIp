@@ -33,6 +33,14 @@ private static WebDriver driver;
 		}
 	}
 
+	public static void obterURL() {
+		String site = driver.getWindowHandle();
+		String sitio = driver.getCurrentUrl();
+		System.out.println(sitio);
+		System.out.println(site);
+		
+	}
 
-
+	
+	
 }
