@@ -41,5 +41,18 @@ public class LoginPage extends BasePage {
 	public void clicarLogin() {
 		clicarBotao(By.xpath("//*[@id=\"clogs\"]/button"));
 	}
+	
+	public void clicarPainelHosts() {
+		
+		clicarBotao(By.xpath("//span[normalize-space()='DNS Dinâmico']"));////*[@id="main-menu-inner"]/ul/li[2]/a/span
+	}
+	
+	public void clicarHosts() {
+		
+		clicarBotao(By.xpath("//*[@id=\"host-panel\"]/table/tbody/tr[1]/td[1]/a"));////*[@id="main-menu-inner"]/ul/li[2]/a/span
+	}
+	
+	
+	//*[@id="host-panel"]/table/tbody/tr[1]/td[1]/a
 
 }

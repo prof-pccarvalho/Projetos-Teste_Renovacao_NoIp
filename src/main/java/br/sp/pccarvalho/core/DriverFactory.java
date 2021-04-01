@@ -2,11 +2,17 @@ package br.sp.pccarvalho.core;
 
 
 
+
+
+import java.util.Set;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class DriverFactory {
@@ -41,6 +47,26 @@ private static WebDriver driver;
 		
 	}
 
+	public static void aguardarPagina() {
+		
+		WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[normalize-space()='DNS Dinâmico']")));
+		
+	}
+
+	public static WebElement findElement(By xpath) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
+	public static void trocarPagina() {
+		// Opens a new window and switches to new window
+		Set<String> WINDOW = driver.getWindowHandles();
+		System.out.println(WINDOW);
+		//driver.switchTo().window("WINDOW");
+		//System.out.println(getDriver().getWindowHandle());
+		//System.out.println(getDriver().getWindowHandles());
+	}
+
 	
 }

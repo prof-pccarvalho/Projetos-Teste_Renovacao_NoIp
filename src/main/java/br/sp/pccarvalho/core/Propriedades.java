@@ -2,7 +2,7 @@ package br.sp.pccarvalho.core;
 
 public class Propriedades {
 	
-public static boolean FECHAR_BROWSER = false;//deixar false se colocar na suite de classes para fechar após execução
+public static boolean FECHAR_BROWSER = true;//deixar false se colocar na suite de classes para fechar após execução
 	
 	public static Browsers browser = Browsers.CHROME;
 	
